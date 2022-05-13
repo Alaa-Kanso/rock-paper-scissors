@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="scores fadeOut">
+            <div class="player-score">
+                <h4>Player</h4>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h4>Computer</h4>
+                <p>0</p>
+            </div>
+        </div>
+
+        <div class="open-screen">
+            <h2>Let's Play!</h2>
+            <button>click to start</button>
+        </div>
+
+        <div class="match fadeOut">
+            <h2 class="winner">Choose an Option</h2>
+            <div class="hands">
+                <img class="player-hand" src="imgs/rock.png">
+                <img class="computer-hand" src="imgs/rock.png">
+            </div>
+            <div class="options">
+                <button class="rock">rock</button>
+                <button class="paper">paper</button>
+                <button class="scissors">scissors</button>
+            </div>
+        </div>
+
+        <div class="end-player-win fadeOut">
+            <h2>Player Win!!</h2>
+            <img  class="pl-win" src="imgs/pl-win.png">
+        </div>
+        <div class="end-computer-win fadeOut">
+            <h2>Computer Win!!</h2>
+            <img class="comp-win" src="imgs/comp-win.png">
+        </div>
+        
+    </section>
+
+    <script src="scr.js"></script>
+</body>
+</html>

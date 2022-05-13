@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    background-color: rgb(229, 255, 0);
+    height:100vh;
+}
+
+.scores{
+    display: flex;
+    justify-content: space-around;
+    height:25vh;
+    align-items: center;
+    color: rgb(33, 30, 30);
+    transition: opacity 1s ease;
+}
+
+.scores h4{
+    font-size: 30px;
+}
+
+.scores p{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.open-screen{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: rgb(33, 30, 30);
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.open-screen h2{
+    font-size: 50px;
+    letter-spacing: 6px;
+}
+
+.open-screen button, .options button{
+    border:none;
+    background: rgb(255, 0, 0);
+    height: 45px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.match, .end-player-win, .end-computer-win{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: opacity 1s ease;
+}
+
+.winner{
+    font-size: 50px;
+    color: rgb(33, 30, 30);
+    text-align: center;
+}
+
+.hands, .options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-hand{
+    transform: rotateY(180deg);
+}
+
+.end-player-win h2, .end-computer-win h2{
+    font-size: 70px;
+    text-align: center;
+    color: rgb(33, 30, 30);
+}
+
+.end-player-win img{
+    margin-top: 9px;
+    width: 400px;
+}
+
+.end-computer-win img{
+    margin-top: 20px;
+    margin-left: 54px;
+    width:400px;
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes shakePlayer{
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    15%{
+        transform: rotateY(180deg) translateY(-25px);
+    }
+    25%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    35%{
+        transform:  rotateY(180deg) translateY(-25px);
+    }
+    50%{
+        transform: rotateY(180deg) translate(0px);
+    }
+    65%{
+        transform: rotateY(180deg) translateY(-25px);
+    }
+    80%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    95%{
+        transform: rotateY(180deg) translateY(-25px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeComputer{
+    0%{
+        transform: translateY(0px);
+    }
+    15%{
+        transform: translateY(-25px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    35%{
+        transform: translateY(-25px);
+    }
+    50%{
+        transform: translate(0px);
+    }
+    65%{
+        transform: translateY(-25px);
+    }
+    80%{
+        transform: translateY(0px);
+    }
+    95%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 480px){
+    body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .scores h4{
+        font-size: 26px;
+    }
+
+    .winner{
+        font-size: 27px;
+        text-align: center;
+    }
+
+    .hands{
+        display: inline-block;
+        align-items: center;
+    }
+
+    .player-hand{
+        width: 160px;
+        margin-left:2px;
+    }
+
+    .computer-hand{
+        width: 160px;
+    }
+    
+    .options button{
+        border:none;
+        height: 40px;
+        width: 80px;
+        padding: 8px;
+        font-size: 14px;
+        margin: 15px;
+        
+    }
+
+    .comp-win{
+        object-fit: contain;
+        height: 14em;
+        padding-right: 51px;
+        
+    }
+
+    .end-player-win h2{
+        font-size: 56px;
+    }
+    
+    .pl-win{
+        object-fit: contain;
+        height: 16em;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+ }
